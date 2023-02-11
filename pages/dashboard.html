@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="header-dashboard">
+        <h2>Cadastro de Notícias</h2>
+    </div>
+    <form enctype="multipart/form-data" method="post" action="/admin/register-news">
+        <input type="text" name="news_title" placeholder="Título da Notícia">
+        <input type="file" name="file">
+        <!-- <input type="text" name="url_image" placeholder="Link da Imagem"> -->
+        <input type="text" name="slug" placeholder="Slug">
+        <textarea name="news_content" placeholder="Escreva sua notícia..."></textarea>
+        <input id="btn" type="submit" name="action" value="Cadastrar Notícia">
+    </form>
+    <div class="header-dashboard">
+        <h2>Listando Notícias</h2>
+    </div>
+    <% for(let i=0; i < posts.length; i++) { %>
+        <div class="news-single">
+            <p>Título: <%= posts[i].title%>
+            </p>
+            <a href="/admin/delete/<%= posts[i].id%>">X</a>
+        </div>
+        <% } %>
+
+</body>
+
+</html>

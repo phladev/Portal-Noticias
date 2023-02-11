@@ -1,0 +1,30 @@
+
+@media screen and (max-width: 1320px) {
+    .most-read, .latests {width: 100%;}
+    .box-latest-single{margin-bottom: 12px;}
+    .single-news{width: 100%;margin-bottom: 24px;}
+  }
+  
+  @media screen and (max-width: 768px) {
+    .logo{text-align: center;}
+    .logo, .form-search {width: 100%;}
+    .form-search{
+      margin-top: 5px;
+      text-align: center;
+    }
+    .featured-title-description h2{
+      margin-bottom: 16px;
+      font-size: 28px;
+    }
+    .featured-title-description p{
+      font-size: 12px;
+    }
+    .most-read, .latests {width: 100%;}
+  
+    .box-latest-single{width: 100%; margin-right: 0; margin-bottom: 12px;}
+    footer p {
+      font-size: 12px;
+    }
+
+    .single-news{width: 100%;margin-bottom: 24px;}
+  }

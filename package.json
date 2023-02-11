@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "production": "pm2 start src/index.js --name PortalNoticias"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "express": "^4.18.2",
     "express-fileupload": "^1.4.0",
     "express-session": "^1.17.3",
-    "mongoose": "^6.9.0"
+    "mongoose": "^6.9.0",
+    "pm2": "^5.2.2"
   }
 }
